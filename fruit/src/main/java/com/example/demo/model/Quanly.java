@@ -3,26 +3,26 @@ package com.example.demo;
 import java.util.Date;
 
 public class Quanly {
-	private String maKHS;
+	private String maQl;
 	private String ten;
 	private Date ngaysinh;
 	private String diachi;
 	private String sdt;
 	private String email;
-	public Quanly(String maKHS, String ten, Date ngaysinh, String diachi, String sdt, String email) {
+	public Quanly(String maQl, String ten, Date ngaysinh, String diachi, String sdt, String email) {
 		super();
-		this.maKHS = maKHS;
+		this.maQl = maQl;
 		this.ten = ten;
 		this.ngaysinh = ngaysinh;
 		this.diachi = diachi;
 		this.sdt = sdt;
 		this.email = email;
 	}
-	public String getMaKHS() {
-		return maKHS;
+	public String getMaQl() {
+		return maQl;
 	}
-	public void setMaKHS(String maKHS) {
-		this.maKHS = maKHS;
+	public void setMaQl(String maQl) {
+		this.maQl = maQl;
 	}
 	public String getTen() {
 		return ten;
