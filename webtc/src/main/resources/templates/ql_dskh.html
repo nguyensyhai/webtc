@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Quản lý kí website</title>
+</head>
+
+<body>
+	<div align="center">
+		<h1>Quản lý khách hàng</h1>
+
+		<form method="get" action="tkkh">
+        <input type="text" name="keyword" /> &nbsp;
+        <input type="submit" value="Search" />
+    </form>
+		
+		<table border="0" cellpadding="10" cellspacing="10">
+			<th>
+				<form method="GET" action=themkh>
+					<button type="submit">Thêm khách hàng</button>
+				</form>
+			</th>
+			<th>
+				<form method="GET" action=returnhome>
+					<button type="submit">Quay lại</button>
+				</form>
+			</th>
+		</table>
+
+
+		<table border="1" cellpadding="10" cellspacing="5">
+			<thread>
+				<tr>
+					<th>Mã khách hàng</th>
+					<th>Họ tên</th>
+					<th>Ngày sinh</th>
+					<th>Địa chỉ</th>
+					<th>Số điện thoại</th>
+					<th>Email</th>
+				</tr>
+			</thread>
+
+			<tbody>
+				<tr th:each="kh:${dsKh}">
+
+					<td th:text="${kh.maKH}">Mã khách hàng</td>
+					<td th:text="${kh.ten}">Họ tên</td>
+					<td th:text="${kh.ngaysinh}">Ngày sinh</td>
+					<td th:text="${kh.diachi}">Địa chỉ</td>
+					<td th:text="${kh.sdt}">Số điện thoại</td>
+					<td th:text="${kh.email}">email</td>
+					<td>
+						<a th:href="@{'suakh/'+${kh.id}}">Sửa</a>
+						<a th:href="@{'xoakh/'+${kh.id}}">Xoá</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+</body>
+
+</html>

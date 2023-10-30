@@ -1,28 +1,28 @@
-package com.example.demo;
+package com.example.model;
 
 import java.util.Date;
 
 public class Khachhang {
-	private String maKHS;
+	private String maKH;
 	private String ten;
 	private Date ngaysinh;
 	private String diachi;
 	private String sdt;
 	private String email;
-	public Khachhang(String maKHS, String ten, Date ngaysinh, String diachi, String sdt, String email) {
+	public Khachhang(String maKH, String ten, Date ngaysinh, String diachi, String sdt, String email) {
 		super();
-		this.maKHS = maKHS;
+		this.maKH = maKH;
 		this.ten = ten;
 		this.ngaysinh = ngaysinh;
 		this.diachi = diachi;
 		this.sdt = sdt;
 		this.email = email;
 	}
-	public String getMaKHS() {
-		return maKHS;
+	public String getMaKH() {
+		return maKH;
 	}
-	public void setMaKHS(String maKHS) {
-		this.maKHS = maKHS;
+	public void setMaKH(String maKH) {
+		this.maKH = maKH;
 	}
 	public String getTen() {
 		return ten;
